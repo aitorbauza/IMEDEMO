@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Encabezado con el texto "IME Demo" -->
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:text="IME Demo"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:background="#D3D3D3"
+        android:gravity="center" />
+
+    <!-- TableLayout con las filas y los campos de texto -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/head"
+        android:stretchColumns="1">
+
+        <!-- Fila 1: Texto sin reglas especiales -->
+        <TableRow>
+            <TextView
+                android:text="No special rules:" />
+            <EditText />
+        </TableRow>
+
+        <!-- Fila 2: Dirección de correo electrónico -->
+        <TableRow>
+            <TextView
+                android:text="Email address:" />
+            <EditText
+                android:inputType="text|textEmailAddress" />
+        </TableRow>
+
+        <!-- Fila 3: Número decimal con signo -->
+        <TableRow>
+            <TextView
+                android:text="Signed decimal number:" />
+            <EditText
+                android:inputType="number|numberSigned|numberDecimal" />
+        </TableRow>
+
+        <!-- Fila 4: Fecha -->
+        <TableRow>
+            <TextView
+                android:text="Date:" />
+            <EditText
+                android:inputType="date" />
+        </TableRow>
+
+        <!-- Fila 5: Texto multilínea -->
+        <TableRow>
+            <TextView
+                android:text="Multi-line text:" />
+            <EditText
+                android:gravity="top"
+                android:inputType="text|textMultiLine|textAutoCorrect"
+                android:minLines="3" />
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>
